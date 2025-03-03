@@ -2,10 +2,10 @@
 // use the appropriate #define statement to select the code you want to run
 
 
- #define ORIGINAL
+// #define ORIGINAL
 // #define STRINGBUILDER
-// #define OPTIMIZE_ARRAY
-// #define ARRAY_PASS_BY_REFERENCE
+//#define OPTIMIZE_ARRAY
+ #define ARRAY_PASS_BY_REFERENCE
 
 
 using System.Collections;
