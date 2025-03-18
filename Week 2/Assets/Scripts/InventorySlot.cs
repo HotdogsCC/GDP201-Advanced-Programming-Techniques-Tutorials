@@ -21,6 +21,7 @@ public class InventorySlot : MonoBehaviour
 
         // update the front end array
         draggableItem.SetItem(item);
+        
     }
 
 }

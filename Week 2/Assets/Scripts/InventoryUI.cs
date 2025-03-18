@@ -7,10 +7,15 @@ public class InventoryUI : MonoBehaviour
     public DraggableItem itemPrefab;
     public InventorySlot slotPrefab;
 
-    InventorySlot[] slots;
+    public InventorySlot[] slots;
 
     // Start is called before the first frame update
     void Start()
+    {
+        Init();
+    }
+
+    public void Init()
     {
         //create a slot
         slots = new InventorySlot[items.Length];
@@ -26,5 +31,4 @@ public class InventoryUI : MonoBehaviour
             slots[i].Init(this, i, draggableItem);
         }
     }
-    
 }

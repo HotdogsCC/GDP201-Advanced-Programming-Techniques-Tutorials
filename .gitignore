@@ -16,3 +16,5 @@ Week 2/GDP201 Inventory.sln
 /Week 2/Temp
 Week 2/Week 2.sln
 /Week 2/.idea
+Week 2/Tests.csproj
+*.csproj

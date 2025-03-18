@@ -15,7 +15,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public Image image;
 
-    InventoryItem item;
+    public InventoryItem item;
     public void SetItem(InventoryItem i)
     {
         item = i;
