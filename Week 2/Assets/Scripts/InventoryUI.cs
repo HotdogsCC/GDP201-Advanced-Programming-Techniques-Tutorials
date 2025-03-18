@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
@@ -16,12 +14,17 @@ public class InventoryUI : MonoBehaviour
     {
         //create a slot
         slots = new InventorySlot[items.Length];
+        for (int i = 0; i < items.Length; i++)
+        {
+            slots[i] = Instantiate(slotPrefab, transform);
 
+            DraggableItem draggableItem = Instantiate(itemPrefab, slots[i].transform);
+            //set the draggable item's data according to the inventory item array
+            draggableItem.SetItem(items[i]);
+            
+            //assign this new draggable item to the slot
+            slots[i].Init(this, i, draggableItem);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

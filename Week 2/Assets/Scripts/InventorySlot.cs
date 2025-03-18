@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventorySlot : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public InventoryUI parentInventory;
+    public int index;
+    public DraggableItem draggableItem;
+
+    public void Init(InventoryUI par, int ind, DraggableItem it)
     {
-        
+        index = ind;
+        parentInventory = par;
+        draggableItem = it;
+        draggableItem.slot = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateItem(InventoryItem item)
     {
-        
+        // update the backend array
+        parentInventory.items[index] = item;
+
+        // update the front end array
+        draggableItem.SetItem(item);
     }
+
 }
