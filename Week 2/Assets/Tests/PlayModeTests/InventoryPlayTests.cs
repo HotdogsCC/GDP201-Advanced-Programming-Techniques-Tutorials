@@ -48,12 +48,12 @@ public class InventoryPlayTests
         InventoryUI inventoryUI = inventoryGameObject.AddComponent<InventoryUI>();
         
         //Init the items array for InventoryUI
-        inventoryUI.items = new InventoryItem[2];
-        inventoryUI.items[0] = ScriptableObject.CreateInstance<InventoryItem>();
-        inventoryUI.items[0].name = "Sword";
+        inventoryUI.inventory.items = new InventoryItem[2];
+        inventoryUI.inventory.items[0] = ScriptableObject.CreateInstance<InventoryItem>();
+        inventoryUI.inventory.items[0].name = "Sword";
         
-        inventoryUI.items[1] = ScriptableObject.CreateInstance<InventoryItem>();
-        inventoryUI.items[1].name = "Shield";
+        inventoryUI.inventory.items[1] = ScriptableObject.CreateInstance<InventoryItem>();
+        inventoryUI.inventory.items[1].name = "Shield";
         
         // Load the slot and item prefabs needed to initialise the InventoryUI
         inventoryUI.slotPrefab = Resources.Load<InventorySlot>("Prefabs/InventorySlot");
@@ -94,10 +94,10 @@ public class InventoryPlayTests
         //Assert
         
         //Check if items are swapped
-        Assert.AreEqual("Shield", inventoryUI.items[0].name);
+        Assert.AreEqual("Shield", inventoryUI.inventory.items[0].name);
         Assert.AreEqual("Shield", inventoryUI.slots[0].draggableItem.item.name);
         
-        Assert.AreEqual("Sword", inventoryUI.items[1].name);
+        Assert.AreEqual("Sword", inventoryUI.inventory.items[1].name);
         Assert.AreEqual("Sword", inventoryUI.slots[1].draggableItem.item.name);
 
         yield return null;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    public InventoryItem[] items;
+    public Inventory inventory;
 
     public DraggableItem itemPrefab;
     public InventorySlot slotPrefab;
@@ -13,22 +13,40 @@ public class InventoryUI : MonoBehaviour
     void Start()
     {
         Init();
+        inventory.OnItemTransaction += HandleItemTransaction;
     }
 
     public void Init()
     {
         //create a slot
-        slots = new InventorySlot[items.Length];
-        for (int i = 0; i < items.Length; i++)
+        slots = new InventorySlot[inventory.items.Length];
+        for (int i = 0; i < inventory.items.Length; i++)
         {
             slots[i] = Instantiate(slotPrefab, transform);
 
             DraggableItem draggableItem = Instantiate(itemPrefab, slots[i].transform);
             //set the draggable item's data according to the inventory item array
-            draggableItem.SetItem(items[i]);
+            draggableItem.SetItem(inventory.items[i]);
             
             //assign this new draggable item to the slot
             slots[i].Init(this, i, draggableItem);
+        }
+    }
+
+    private void HandleItemTransaction(InventoryItem item, string transactionType)
+    {
+        if(transactionType == "buy")
+        {
+            Debug.Log($"Item bought: {item.name} by {gameObject.name}");
+            // Additional UI update for buying an item
+        }
+        else if(transactionType == "sell")
+        {
+            Debug.Log($"Item sold: {item.name} by {gameObject.name}");
+        }
+        else
+        {
+            Debug.LogError("Whoopsie! You've got an incorrect transaction type in HandleItemTransaction!");
         }
     }
 }
