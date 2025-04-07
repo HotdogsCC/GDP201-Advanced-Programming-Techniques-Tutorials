@@ -86,12 +86,21 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         InventoryItem ours = item;
                         InventoryItem theirs = slotFound.draggableItem.item;
 
-                        slot.parentInventory.inventory.RemoveItem(ours, slot.index);
+                        slot.parentInventory.inventory.AddItem(theirs, slot.index);
                         slot.draggableItem.SetItem(theirs);
 
                         slotFound.parentInventory.inventory.AddItem(ours, slotFound.index);
                         slotFound.draggableItem.SetItem(ours);
+
+
                     }
+
+
+                }
+                else
+                {
+                    //swaps items in same inventory
+                    Swap(slotFound);
                 }
                 return;
             }

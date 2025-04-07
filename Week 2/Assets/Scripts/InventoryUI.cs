@@ -49,4 +49,36 @@ public class InventoryUI : MonoBehaviour
             Debug.LogError("Whoopsie! You've got an incorrect transaction type in HandleItemTransaction!");
         }
     }
+
+    public void Save(string saveFilePath)
+    {
+        inventory.SaveInventory(saveFilePath);
+    }
+
+    public void Load(string saveFilePath)
+    {
+        inventory.LoadInventory(saveFilePath);
+        ReInitialise();
+    }
+
+    // called after loading a saved inventory
+    public void ReInitialise()
+    {
+        // destroy all draggable items in the slots
+        foreach (InventorySlot slot in slots)
+        {
+            Destroy(slot.draggableItem.gameObject);
+            slot.draggableItem = null;
+        }
+
+        // instantiate new draggable items from the inventory items 
+        // (loaded from the save file)
+        for (int i = 0; i < inventory.items.Length; i++)
+        {
+            DraggableItem draggableItem = Instantiate(itemPrefab, slots[i].transform);
+            draggableItem.SetItem(inventory.items[i]);
+            slots[i].Init(this, i, draggableItem);
+        }
+    }
+
 }
