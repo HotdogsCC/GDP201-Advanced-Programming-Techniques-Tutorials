@@ -12,12 +12,12 @@
             }
         },
         {
-            "itemName": "three four",
-            "description": "beep bap",
+            "itemName": "one two",
+            "description": "meep meep",
             "iconPath": "Icons/FootstepSettings Icon",
             "color": {
                 "r": 1.0,
-                "g": 0.0,
+                "g": 0.7210716009140015,
                 "b": 0.0,
                 "a": 1.0
             }
@@ -89,14 +89,14 @@
             }
         },
         {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
+            "itemName": "three four",
+            "description": "beep bap",
+            "iconPath": "Icons/FootstepSettings Icon",
             "color": {
-                "r": 0.0,
+                "r": 1.0,
                 "g": 0.0,
                 "b": 0.0,
-                "a": 0.0
+                "a": 1.0
             }
         },
         {

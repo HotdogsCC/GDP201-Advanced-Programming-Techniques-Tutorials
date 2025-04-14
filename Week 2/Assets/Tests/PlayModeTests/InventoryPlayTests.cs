@@ -33,11 +33,11 @@ public class InventoryPlayTests
             new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
         }
         
-        // Create the inventory game object with InventoryUI component
-        GameObject inventoryGameObject = new GameObject("Inventory");
+        // Create the inventory UI game object with InventoryUI component
+        GameObject inventoryUIGameObject = new GameObject("InventoryUI");
         //Make it a child of the Canvas
-        inventoryGameObject.transform.SetParent(canvas.transform);
-        GridLayoutGroup gridLayoutGroup = inventoryGameObject.AddComponent<GridLayoutGroup>();
+        inventoryUIGameObject.transform.SetParent(canvas.transform);
+        GridLayoutGroup gridLayoutGroup = inventoryUIGameObject.AddComponent<GridLayoutGroup>();
         gridLayoutGroup.cellSize = new Vector2(64, 64);
         gridLayoutGroup.spacing = new Vector2(2, 2);
         gridLayoutGroup.startCorner = GridLayoutGroup.Corner.UpperLeft;
@@ -45,7 +45,14 @@ public class InventoryPlayTests
         gridLayoutGroup.childAlignment = TextAnchor.MiddleCenter;
         gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         gridLayoutGroup.constraintCount = 4;
-        InventoryUI inventoryUI = inventoryGameObject.AddComponent<InventoryUI>();
+        InventoryUI inventoryUI = inventoryUIGameObject.AddComponent<InventoryUI>();
+        
+        // Create the inventory game object (one that holds the data)
+        GameObject inventoryGameObject = new GameObject("Inventory");
+        Inventory inventoryComponent = inventoryGameObject.AddComponent<Inventory>();
+        
+        //Assign the inventory to the inventory UI
+        inventoryUI.inventory = inventoryComponent;
         
         //Init the items array for InventoryUI
         inventoryUI.inventory.items = new InventoryItem[2];
@@ -58,6 +65,8 @@ public class InventoryPlayTests
         // Load the slot and item prefabs needed to initialise the InventoryUI
         inventoryUI.slotPrefab = Resources.Load<InventorySlot>("Prefabs/InventorySlot");
         inventoryUI.itemPrefab = Resources.Load<DraggableItem>("Prefabs/InventoryItem");
+        
+        
         
         // Call initialise() to setup the inventory ui
         inventoryUI.Init();
