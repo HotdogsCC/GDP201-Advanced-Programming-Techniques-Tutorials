@@ -63,7 +63,7 @@
                     "name": "Previous",
                     "type": "Button",
                     "id": "2776c80d-3c14-4091-8c56-d04ced07a2b0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -81,7 +81,7 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "641cd816-40e6-41b4-8c3d-04687c349290",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1000,8 +1000,8 @@
                 },
                 {
                     "name": "",
-                    "id": "02c04e86-5ad3-4f2f-964a-91da49d40712",
-                    "path": "<Keyboard>/e",
+                    "id": "df128f09-eef2-4f23-a47e-fea9022450f9",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -1011,11 +1011,11 @@
                 },
                 {
                     "name": "",
-                    "id": "df128f09-eef2-4f23-a47e-fea9022450f9",
-                    "path": "<Keyboard>/escape",
+                    "id": "e26e61bd-a3a8-4df2-a765-c734eef5dad8",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Keyboard&Mouse",
+                    "groups": "",
                     "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false

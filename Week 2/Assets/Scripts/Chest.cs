@@ -71,9 +71,10 @@ public class Chest : MonoBehaviour
 
     private void TryToOpen()
     {
+
         //if the player isn't nearby, don't do anything
         if (!playerNearby) return;
-        
+
         if (isOpen)
         {
             //see if the close action button was pressed
@@ -93,9 +94,6 @@ public class Chest : MonoBehaviour
                 OnOpen();
             }
         }
-        
-        //flips isOpen
-        isOpen = !isOpen;
 
     }
     
@@ -111,6 +109,9 @@ public class Chest : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         playerInventory.gameObject.SetActive(true);
         chestInventory.gameObject.SetActive(true);
+
+        //flips isOpen
+        isOpen = !isOpen;
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
@@ -126,6 +127,9 @@ public class Chest : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         playerInventory.gameObject.SetActive(false);
         chestInventory.gameObject.SetActive(false);
+
+        //flips isOpen
+        isOpen = !isOpen;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -133,6 +137,7 @@ public class Chest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = true;
+            Debug.Log("player walked into me");
         }
     }
 
@@ -141,6 +146,7 @@ public class Chest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = false;
+            Debug.Log("player left me");
         }
     }
 }
