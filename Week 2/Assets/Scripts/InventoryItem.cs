@@ -11,6 +11,8 @@ public class InventoryItem : ScriptableObject
 
     public Sprite icon;
     public Color color = Color.white;
+
+    public int price;
 }
 
 [System.Serializable]

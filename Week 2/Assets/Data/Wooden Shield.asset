@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 719b9c4472757a540b762882f67f4fe5, type: 3}
-  m_Name: TestItem 0
+  m_Name: Wooden Shield
   m_EditorClassIdentifier: 
-  itemName: one two
-  description: meep meep
-  icon: {fileID: 21300000, guid: 20642a39516014c499a8f24a4e59ae6c, type: 3}
-  color: {r: 1, g: 0.7210716, b: 0, a: 1}
+  itemName: Wooden Shield
+  description: A simple but effective way of protecting a young hunter from harm.
+  icon: {fileID: 21300000, guid: d5bc77e0db82bc04d9fa26892b50807a, type: 3}
+  color: {r: 0, g: 0.735849, b: 0.108874954, a: 1}
+  price: 150

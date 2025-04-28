@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
-public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
 
     public bool dragging;
@@ -16,6 +17,18 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public Image image;
 
     public InventoryItem item;
+
+    private InfoBox infoBox;
+
+    private void Start()
+    {
+        infoBox = FindObjectOfType<InfoBox>();
+        if (infoBox == null)
+        {
+            Debug.LogWarning("Info box was failed to be found");
+        }
+    }
+
     public void SetItem(InventoryItem i)
     {
         item = i;
@@ -46,6 +59,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetAsLastSibling();
 
         dragging = true;
+        
+        infoBox.Vanish();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -76,8 +91,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                 // In this case, we should not trigger the OnItemTransaction event.
                 if (slot.parentInventory != slotFound.parentInventory)
                 {
-                    // inventories are not the same - we are moving between 
-                    // inventories
+                    // inventories are not the same - we are moving between inventories
                     if (slotFound.draggableItem != null)
                     {
                         // we need to keep a copy of the items we are swapping, 
@@ -91,11 +105,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
                         slotFound.parentInventory.inventory.AddItem(ours, slotFound.index);
                         slotFound.draggableItem.SetItem(ours);
-
-
                     }
-
-
                 }
                 else
                 {
@@ -120,6 +130,16 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             slot.UpdateItem(theirs);
             other.slot.UpdateItem(ours);
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        infoBox.Summon(transform.position, item);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        infoBox.Vanish();
     }
 }
 

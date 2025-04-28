@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,14 @@ public class Inventory : MonoBehaviour
     //define a delegate and event for item transactions
     public delegate void ItemTransactionHandler(InventoryItem item, string transactionType);
     public event ItemTransactionHandler OnItemTransaction;
+
+    private Wallet playerWallet;
+
+    private void Start()
+    {
+        playerWallet = FindObjectOfType<Wallet>();
+        Debug.Log(playerWallet);
+    }
 
     public void AddItem(InventoryItem item, int index)
     {
@@ -24,8 +33,14 @@ public class Inventory : MonoBehaviour
             items[index] = item;
             if(OnItemTransaction != null && item != null)
             {
+                if (playerWallet.Money < item.price)
+                {
+                    Debug.Log("cannot afford");
+                    return;
+                }
                 //Raise the event as a "buy" transaction
                 OnItemTransaction.Invoke(item, "buy");
+                playerWallet.Money -= item.price;
             }
         } 
             
