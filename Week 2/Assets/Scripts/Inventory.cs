@@ -62,11 +62,11 @@ public class Inventory : MonoBehaviour
                    JsonUtility.FromJson<SerializableInventory>(json);
 
             serializableInventory.ApplyToInventory(this);
-            Debug.Log($"Inventory loaded from {saveFilePath}");
+            GameLogger.LogInfo($"Inventory loaded from {saveFilePath}", "File");
         }
         else
         {
-            Debug.LogWarning($"Save file not found: {saveFilePath}");
+            GameLogger.LogWarning($"Save file not found: {saveFilePath}", "File");
         }
     }
 }

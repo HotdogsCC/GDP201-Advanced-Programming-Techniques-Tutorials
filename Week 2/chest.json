@@ -1,17 +1,6 @@
 {
     "items": [
         {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            }
-        },
-        {
             "itemName": "one two",
             "description": "meep meep",
             "iconPath": "Icons/FootstepSettings Icon",
@@ -23,72 +12,6 @@
             }
         },
         {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            }
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            }
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            }
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            }
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            }
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            }
-        },
-        {
             "itemName": "three four",
             "description": "beep bap",
             "iconPath": "Icons/FootstepSettings Icon",
@@ -97,6 +20,83 @@
                 "g": 0.0,
                 "b": 0.0,
                 "a": 1.0
+            }
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
             }
         },
         {
