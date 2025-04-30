@@ -23,14 +23,14 @@
             }
         },
         {
-            "itemName": "Wooden Shield",
-            "description": "A simple but effective way of protecting a young hunter from harm.",
-            "iconPath": "Icons/Shield Icon",
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
             "color": {
                 "r": 0.0,
-                "g": 0.7358490228652954,
-                "b": 0.10887495428323746,
-                "a": 1.0
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
             }
         },
         {

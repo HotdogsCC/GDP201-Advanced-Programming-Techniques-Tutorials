@@ -28,4 +28,29 @@ public class Wallet : MonoBehaviour
     {
         uiWidget.text = "$" + money.ToString();
     }
+
+    public void SaveWallet(string saveFilePath)
+    {
+        string moneyAsString = Money.ToString();
+        System.IO.File.WriteAllText(saveFilePath, moneyAsString);
+    }
+
+    public void LoadWallet(string saveFilePath)
+    {
+        // check the file exists
+        if (System.IO.File.Exists(saveFilePath))
+        {
+            //read the file
+            string txt = System.IO.File.ReadAllText(saveFilePath);
+            
+            //try to convert the string to an integer
+            int.TryParse(txt, out int moneyFromTxt);
+
+            //value wont be -1 if parsed without errors
+            if (moneyFromTxt != -1)
+            {
+                Money = moneyFromTxt;
+            }
+        }
+    }
 }
