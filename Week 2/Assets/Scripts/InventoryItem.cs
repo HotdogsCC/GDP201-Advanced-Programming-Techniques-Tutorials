@@ -22,12 +22,14 @@ public class SerializableInventoryItem
     public string description;
     public string iconPath; // Path to load sprite icons
     public Color color;
+    public int price;
 
     public SerializableInventoryItem(InventoryItem item)
     {
         itemName = item.itemName;
         description = item.description;
         color = item.color;
+        price = item.price;
 
         // Save the sprite icon path for later use
         iconPath =
@@ -40,6 +42,7 @@ public class SerializableInventoryItem
         newItem.itemName = itemName;
         newItem.description = description;
         newItem.color = color;
+        newItem.price = price;
 
         if (!string.IsNullOrEmpty(iconPath))
         {
@@ -70,7 +73,10 @@ public class SerializableInventory
         for (int i = 0; i < items.Length; i++)
         {
             if (items[i] != null)
+            {
                 inventory.items[i] = items[i].ToInventoryItem();
+            }
+                
         }
     }
 }

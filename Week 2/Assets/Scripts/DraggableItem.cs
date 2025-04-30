@@ -39,7 +39,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                 image.sprite = item.icon;
                 image.color = item.color;
             }
-            gameObject.SetActive(item != null);
+
+            if (item != null)
+            {
+                if (item.price != 0)
+                {
+                    gameObject.SetActive(true);
+                    return;
+                }
+            }
+            gameObject.SetActive(false);
+            
         }
     }
 
