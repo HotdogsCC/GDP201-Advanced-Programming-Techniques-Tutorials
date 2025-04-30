@@ -16,7 +16,6 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         playerWallet = FindObjectOfType<Wallet>();
-        Debug.Log(playerWallet);
     }
 
     public void AddItem(InventoryItem item, int index)
