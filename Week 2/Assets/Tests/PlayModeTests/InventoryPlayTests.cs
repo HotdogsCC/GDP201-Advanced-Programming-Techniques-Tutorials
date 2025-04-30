@@ -5,20 +5,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.TestTools;
 using UnityEngine.UI;
+using TMPro;
+using UnityEditor;
 
 
 public class InventoryPlayTests
 {
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator DragItemToNewSlotAndSwapItems()
+    private InventoryUI ArrangeUI()
     {
-        // Arrange: Set up two InventorySlot instances and assign items
-        // Act: Simulate dragging a DraggableItem from one slot to another
-        // Assert: Verify the items swapped
-        
-        //Arrange
         
         // Create a UI canvas
         GameObject canvasGameObject = new GameObject("Canvas");
@@ -32,6 +26,23 @@ public class InventoryPlayTests
         {
             new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
         }
+        
+        // create the info pop up box (just with the script so it exists)
+        GameObject infoBox = new GameObject("Info Box");
+        infoBox.AddComponent<InfoBox>();
+        
+        // create the money ui
+        GameObject moneyUI = new GameObject("Money");
+        TextMeshProUGUI moneyTMpro = moneyUI.AddComponent<TextMeshProUGUI>();
+        
+        
+        // create the player wallet with lots of money
+        GameObject playerWallet = new GameObject("Player Wallet");
+        Wallet walletComponent = playerWallet.AddComponent<Wallet>();
+        walletComponent.uiWidget = moneyTMpro;
+        walletComponent.Money = 9999;
+        
+        
         
         // Create the inventory UI game object with InventoryUI component
         GameObject inventoryUIGameObject = new GameObject("InventoryUI");
@@ -70,8 +81,25 @@ public class InventoryPlayTests
         
         // Call initialise() to setup the inventory ui
         inventoryUI.Init();
+
+        return inventoryUI;
+    }
+    
+    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
+    // `yield return null;` to skip a frame.
+    [UnityTest]
+    public IEnumerator DragItemToNewSlotAndSwapItems()
+    {
+        // Arrange: Set up two InventorySlot instances and assign items
+        // Act: Simulate dragging a DraggableItem from one slot to another
+        // Assert: Verify the items swapped
+        
+        //Arrange
+        InventoryUI inventoryUI = ArrangeUI();
         
         //Act
+
+        yield return null;
         
         //Simulate dragging from slot 0
         PointerEventData pointerEventData = new PointerEventData(EventSystem.current);

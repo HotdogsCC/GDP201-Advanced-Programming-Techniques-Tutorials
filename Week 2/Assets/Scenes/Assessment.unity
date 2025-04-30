@@ -1625,7 +1625,7 @@ MonoBehaviour:
   nameOfItem: {fileID: 878811319}
   description: {fileID: 393732298}
   price: {fileID: 137515568}
-  offset: 160
+  offset: 120
 --- !u!1 &874605735
 GameObject:
   m_ObjectHideFlags: 0

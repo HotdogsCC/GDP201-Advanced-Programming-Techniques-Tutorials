@@ -26,7 +26,7 @@ public class InfoBox : MonoBehaviour
     {
         SetNameOfItem(item.itemName);
         SetDescription(item.description);
-        SetPrice(item.price);
+        SetPrice(item.price, item);
     }
     
     // sets the name of the item for the popup box
@@ -47,7 +47,24 @@ public class InfoBox : MonoBehaviour
         string priceAsString = inputPrice.ToString();
 
         price.text = "$ " + priceAsString;
+        
+    }
 
+    public void SetPrice(int inputPrice, InventoryItem item)
+    {
+        SetPrice(inputPrice);
+        
+        Wallet playerWallet = FindObjectOfType<Wallet>();
+        
+        //checks if the player the amount required
+        if (playerWallet.Money >= inputPrice)
+        {
+            price.color = Color.green;
+        }
+        else
+        {
+            price.color = Color.red;
+        }
     }
 
     public void Summon(Vector3 positionToGoTo)

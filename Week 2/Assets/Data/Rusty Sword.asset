@@ -16,4 +16,4 @@ MonoBehaviour:
   description: A sword worn with age; perfect for young and naive hunters.
   icon: {fileID: 21300000, guid: 382a194eb20284144b763a0bb7ae4859, type: 3}
   color: {r: 0.9433962, g: 0, b: 0.20243716, a: 1}
-  price: 250
+  price: 400

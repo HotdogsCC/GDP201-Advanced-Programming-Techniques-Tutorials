@@ -25,7 +25,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         infoBox = FindObjectOfType<InfoBox>();
         if (infoBox == null)
         {
-            Debug.LogWarning("Info box was failed to be found");
+            Debug.Log("Info box was failed to be found");
         }
     }
 
@@ -100,6 +100,25 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         InventoryItem ours = item;
                         InventoryItem theirs = slotFound.draggableItem.item;
 
+                        Wallet playerWallet = FindObjectOfType<Wallet>();
+                        if (playerWallet == null)
+                        {
+                            GameLogger.LogWarning("player wallet not found");
+                            return;
+                        }
+
+                        //checks if the item is being moved to the player inventory
+                        //i.e. checking if an item is being sold
+                        if (slotFound.parentInventory.gameObject.name == "Player Inventory")
+                        {
+                            //checks the player can afford the purchase
+                            if (playerWallet.Money < ours.price)
+                            {
+                                //doesnt run the swap if the player cannot aford it
+                                return;
+                            }
+                        }
+                        
                         slot.parentInventory.inventory.AddItem(theirs, slot.index);
                         slot.draggableItem.SetItem(theirs);
 

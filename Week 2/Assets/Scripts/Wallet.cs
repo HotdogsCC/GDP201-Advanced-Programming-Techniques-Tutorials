@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI uiWidget;
+    [SerializeField] public TextMeshProUGUI uiWidget;
     [SerializeField] private int money;
     
     public int Money

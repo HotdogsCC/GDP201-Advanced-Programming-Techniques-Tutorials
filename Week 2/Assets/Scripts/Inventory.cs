@@ -38,9 +38,9 @@ public class Inventory : MonoBehaviour
                     Debug.Log("cannot afford");
                     return;
                 }
+
                 //Raise the event as a "buy" transaction
                 OnItemTransaction.Invoke(item, "buy");
-                playerWallet.Money -= item.price;
             }
         } 
             

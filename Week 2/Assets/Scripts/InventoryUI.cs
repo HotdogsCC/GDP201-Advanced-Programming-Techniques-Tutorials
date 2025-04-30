@@ -39,10 +39,25 @@ public class InventoryUI : MonoBehaviour
         {
             Debug.Log($"Item bought: {item.name} by {gameObject.name}");
             // Additional UI update for buying an item
+
+            //if the player bought the item, they should be charged
+            //(the player's wallet amount was already checked in DraggableItem)
+            if (gameObject.name == "Player Inventory")
+            {
+                Wallet playerWallet = FindObjectOfType<Wallet>();
+                playerWallet.Money -= item.price;
+            }
         }
         else if(transactionType == "sell")
         {
             Debug.Log($"Item sold: {item.name} by {gameObject.name}");
+            
+            //if the player sold the item, they should be refunded
+            if (gameObject.name == "Player Inventory")
+            {
+                Wallet playerWallet = FindObjectOfType<Wallet>();
+                playerWallet.Money += item.price;
+            }
         }
         else
         {
