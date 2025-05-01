@@ -73,100 +73,100 @@
             "price": 0
         },
         {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
+            "itemName": "Rusty Sword",
+            "description": "A sword worn with age; perfect for young and naive hunters.",
+            "iconPath": "Icons/Sword Icon",
             "color": {
-                "r": 0.0,
+                "r": 0.9433962106704712,
                 "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "Wooden Shield",
-            "description": "A simple but effective way of protecting a young hunter from harm.",
-            "iconPath": "Icons/Shield Icon",
-            "color": {
-                "r": 0.0,
-                "g": 0.7358490228652954,
-                "b": 0.10887495428323746,
+                "b": 0.202437162399292,
                 "a": 1.0
             },
-            "price": 150
+            "price": 400
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
         },
         {
             "itemName": "",

@@ -69,15 +69,15 @@ public class InventoryPlayTests
         inventoryUI.inventory.items = new InventoryItem[2];
         inventoryUI.inventory.items[0] = ScriptableObject.CreateInstance<InventoryItem>();
         inventoryUI.inventory.items[0].name = "Sword";
+        inventoryUI.inventory.items[0].price = 1;
         
         inventoryUI.inventory.items[1] = ScriptableObject.CreateInstance<InventoryItem>();
         inventoryUI.inventory.items[1].name = "Shield";
-        
+        inventoryUI.inventory.items[1].price = 1;
+
         // Load the slot and item prefabs needed to initialise the InventoryUI
         inventoryUI.slotPrefab = Resources.Load<InventorySlot>("Prefabs/InventorySlot");
         inventoryUI.itemPrefab = Resources.Load<DraggableItem>("Prefabs/InventoryItem");
-        
-        
         
         // Call initialise() to setup the inventory ui
         inventoryUI.Init();
@@ -100,7 +100,7 @@ public class InventoryPlayTests
         //Act
 
         yield return null;
-        
+
         //Simulate dragging from slot 0
         PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
         
