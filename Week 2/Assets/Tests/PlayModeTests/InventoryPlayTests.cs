@@ -18,7 +18,12 @@ public class InventoryPlayTests
         GameObject canvasGameObject = new GameObject("Canvas");
         Canvas canvas = canvasGameObject.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-        canvasGameObject.AddComponent<CanvasScaler>();
+        
+        CanvasScaler canvasScaler = canvasGameObject.AddComponent<CanvasScaler>();
+        canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        canvasScaler.referenceResolution = new Vector2(1920, 1080);
+        canvasScaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+        
         canvasGameObject.AddComponent<GraphicRaycaster>();
         
         // Add event system for drag events
@@ -49,7 +54,7 @@ public class InventoryPlayTests
         //Make it a child of the Canvas
         inventoryUIGameObject.transform.SetParent(canvas.transform);
         GridLayoutGroup gridLayoutGroup = inventoryUIGameObject.AddComponent<GridLayoutGroup>();
-        gridLayoutGroup.cellSize = new Vector2(64, 64);
+        gridLayoutGroup.cellSize = new Vector2(128, 128);
         gridLayoutGroup.spacing = new Vector2(2, 2);
         gridLayoutGroup.startCorner = GridLayoutGroup.Corner.UpperLeft;
         gridLayoutGroup.startAxis = GridLayoutGroup.Axis.Horizontal;
@@ -66,7 +71,7 @@ public class InventoryPlayTests
         inventoryUI.inventory = inventoryComponent;
         
         //Init the items array for InventoryUI
-        inventoryUI.inventory.items = new InventoryItem[2];
+        inventoryUI.inventory.items = new InventoryItem[8];
         inventoryUI.inventory.items[0] = ScriptableObject.CreateInstance<InventoryItem>();
         inventoryUI.inventory.items[0].name = "Sword";
         inventoryUI.inventory.items[0].price = 1;
@@ -195,6 +200,155 @@ public class InventoryPlayTests
         
         Assert.AreEqual("Sword", inventory2UI.inventory.items[1].name);
         Assert.AreEqual("Sword", inventory2UI.slots[1].draggableItem.item.name);
+
+        yield return null;
+    }
+
+    [UnityTest]
+    public IEnumerator WalletUIDisplaysCorrectAmount()
+    {
+        // Arrange: Create a canvas with a tmpro game object,
+        // create a wallet game object, and assign the tmpro to wallet
+        
+        //Act: Run a frame, the code should run on start to displat amount
+        
+        //Assert: confirm the amount being displayed is expected
+        
+        //arrange
+        
+        //create canvas
+        GameObject canvasGameObject = new GameObject("Canvas");
+        Canvas canvas = canvasGameObject.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvasGameObject.AddComponent<CanvasScaler>();
+        canvasGameObject.AddComponent<GraphicRaycaster>();
+        
+        // Add event system for drag events
+        if (EventSystem.current == null)
+        {
+            new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+        }
+        
+        // create the money ui
+        GameObject moneyUI = new GameObject("Money");
+        TextMeshProUGUI moneyTMpro = moneyUI.AddComponent<TextMeshProUGUI>();
+        
+        
+        // create the player wallet with lots of money
+        GameObject playerWallet = new GameObject("Player Wallet");
+        Wallet walletComponent = playerWallet.AddComponent<Wallet>();
+        walletComponent.uiWidget = moneyTMpro;
+        walletComponent.Money = 9999;
+        
+        //act
+        yield return null;
+        
+        //assert
+        Assert.AreEqual("$9999", moneyTMpro.text);
+    }
+
+    [UnityTest]
+    public IEnumerator DragItemToSameInventoryEmptySlot()
+    {
+        //Arrange
+        InventoryUI inventoryUI = ArrangeUI();
+        
+        //act
+
+        yield return null;
+        
+        //Simulate dragging from slot 0
+        PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+        
+        //Set initial pointer position to the centre of the draggble item
+        RectTransform draggableItemRect = inventoryUI.slots[0].draggableItem.GetComponent<RectTransform>();
+        Vector3 startPosition = draggableItemRect.position;
+        pointerEventData.position = startPosition;
+        
+        // Start dragging
+        inventoryUI.slots[0].draggableItem.OnBeginDrag(pointerEventData);
+        //We need to yield to allow the Event system to update
+        yield return null;
+        // Simulate dragging over to the target slot (Slot 2, which is nothing)
+        RectTransform targetSlotRect = inventoryUI.slots[2].GetComponent<RectTransform>();
+        
+        //Hover mouse over target position
+        pointerEventData.position = targetSlotRect.position;
+        
+        inventoryUI.slots[0].draggableItem.OnDrag(pointerEventData);
+        
+        //We need to yield to allow the Event system to update
+        yield return null;
+        
+        // End dragging
+        inventoryUI.slots[0].draggableItem.OnEndDrag(pointerEventData);
+        
+        yield return null;
+        //Assert
+        
+        //Check if items are swapped
+        Assert.IsNull(inventoryUI.inventory.items[0]);
+        
+        Assert.AreEqual("Sword", inventoryUI.inventory.items[2].name);
+        Assert.AreEqual("Sword", inventoryUI.slots[2].draggableItem.item.name);
+
+        yield return null;
+    }
+    
+    [UnityTest]
+    public IEnumerator DragItemToNewInventoryEmptySlot()
+    {
+        // Arrange: Set up 2 Inventories, both with their own UI and 1 item
+        // Act: Simulate dragging a DraggableItem from one inventory to another
+        // Assert: Verify the items swapped
+        
+        //Arrange
+
+        InventoryUI inventory1UI = ArrangeUI();
+        InventoryUI inventory2UI = ArrangeUI();
+        
+        // set positions
+        inventory1UI.transform.position = new Vector3(-288, 0, 0);
+        inventory2UI.transform.position = new Vector3(288, 0, 0);
+        
+        //Act
+        
+        yield return null;
+        
+        //Simulate dragging from slot 0
+        PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+        
+        //Set initial pointer position to the centre of the draggable item
+        RectTransform draggableItemRect = inventory1UI.slots[0].draggableItem.GetComponent<RectTransform>();
+        Vector3 startPosition = draggableItemRect.position;
+        pointerEventData.position = startPosition;
+        
+        // Start dragging
+        inventory1UI.slots[0].draggableItem.OnBeginDrag(pointerEventData);
+        //We need to yield to allow the Event system to update
+        yield return null;
+        // Simulate dragging over to the target slot (in the 2nd inventory) (and it has nothing)
+        RectTransform targetSlotRect = inventory2UI.slots[2].GetComponent<RectTransform>();
+        
+        //Hover mouse over target position
+        pointerEventData.position = targetSlotRect.position;
+        
+        inventory1UI.slots[0].draggableItem.OnDrag(pointerEventData);
+        
+        //We need to yield to allow the Event system to update
+        yield return null;
+        
+        // End dragging
+        inventory1UI.slots[0].draggableItem.OnEndDrag(pointerEventData);
+        
+        yield return null;
+        //Assert
+        
+        //Check if items are swapped
+        Assert.IsNull(inventory1UI.inventory.items[0]);
+        
+        Assert.AreEqual("Sword", inventory2UI.inventory.items[2].name);
+        Assert.AreEqual("Sword", inventory2UI.slots[2].draggableItem.item.name);
 
         yield return null;
     }

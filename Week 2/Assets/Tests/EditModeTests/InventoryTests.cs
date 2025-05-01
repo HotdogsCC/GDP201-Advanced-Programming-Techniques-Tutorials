@@ -6,7 +6,6 @@ using UnityEngine.TestTools;
 
 public class InventoryTests
 {
-    // A Test behaves as an ordinary method
     [Test]
     public void InitialiseInventorySlotWithItem()
     {
@@ -28,14 +27,22 @@ public class InventoryTests
         //Assert
         Assert.AreEqual("Sword", inventorySlot.draggableItem.item.name);
     }
-
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator InventoryTestsWithEnumeratorPasses()
+    
+    [Test]
+    public void InitialiseInventorySlotWithoutItem()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        //Arrange: Set up an InventorySlot
+        //Act: Verify if the draggableItem (which holds the item) is null right after initialization
+        //Assert: Verify that the InventorySlot contains the nothing
+        
+        //Arrange
+        InventorySlot inventorySlot = new GameObject().AddComponent<InventorySlot>();
+        
+        //Act
+        bool isNull = inventorySlot.draggableItem == null;
+        
+        //Assert
+        Assert.IsTrue(isNull);
     }
+    
 }
