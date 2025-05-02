@@ -352,4 +352,61 @@ public class InventoryPlayTests
 
         yield return null;
     }
+
+    [UnityTest]
+    public IEnumerator SavesAndLoadsOneInventory()
+    {
+        // this test does NOT test the act of pressing the on screen
+        // save and load icons, and only tests the functionally pressing
+        // the icons would do
+        
+        // Arrange: create a canvas with a text mesh pro object,
+        // a wallet game object, and a save and load script objects.
+        
+        //arrange
+        
+        //create canvas
+        GameObject canvasGameObject = new GameObject("Canvas");
+        Canvas canvas = canvasGameObject.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvasGameObject.AddComponent<CanvasScaler>();
+        canvasGameObject.AddComponent<GraphicRaycaster>();
+        
+        // Add event system for drag events
+        if (EventSystem.current == null)
+        {
+            new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+        }
+        
+        // create the money ui
+        GameObject moneyUI = new GameObject("Money");
+        TextMeshProUGUI moneyTMpro = moneyUI.AddComponent<TextMeshProUGUI>();
+        
+        
+        // create the player wallet with lots of money
+        GameObject playerWallet = new GameObject("Player Wallet");
+        Wallet walletComponent = playerWallet.AddComponent<Wallet>();
+        walletComponent.uiWidget = moneyTMpro;
+        walletComponent.Money = 9999;
+        
+        //act
+        yield return null;
+        
+        //save the money
+    }
+
+    [UnityTest]
+    public IEnumerator SavesAndLoadsWallet()
+    {
+        // this test does NOT test the act of pressing the on screen
+        // save and load icons, and only tests the functionally pressing
+        // the icons would do
+
+        // arrange: need a UI to manipulate and to check it saved
+        
+        // act: save the ui, run a frame,  alter it, then revert to the save
+        
+        // assert: confirm the loading back of the ui resulted in the original ui from the save
+        yield return null;
+    }
 }
