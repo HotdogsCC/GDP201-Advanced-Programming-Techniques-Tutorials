@@ -74,10 +74,12 @@ public class InventoryPlayTests
         inventoryUI.inventory.items = new InventoryItem[8];
         inventoryUI.inventory.items[0] = ScriptableObject.CreateInstance<InventoryItem>();
         inventoryUI.inventory.items[0].name = "Sword";
+        inventoryUI.inventory.items[0].itemName = "Sword";
         inventoryUI.inventory.items[0].price = 1;
         
         inventoryUI.inventory.items[1] = ScriptableObject.CreateInstance<InventoryItem>();
         inventoryUI.inventory.items[1].name = "Shield";
+        inventoryUI.inventory.items[1].itemName = "Shield";
         inventoryUI.inventory.items[1].price = 1;
 
         // Load the slot and item prefabs needed to initialise the InventoryUI
@@ -356,14 +358,53 @@ public class InventoryPlayTests
     [UnityTest]
     public IEnumerator SavesAndLoadsOneInventory()
     {
+        // this test does NOT test the act of pressing the on screen save and load icons,
+        // and only tests the functionally pressing what the icons would do.
+        
+        // arrange: need a user interface initialised with some assets
+        // act: save the ui, alter it, load the save
+        // assert: and check it has been restored correctly
+        
+        // arrange: 
+        InventoryUI inventoryUI = ArrangeUI();
+        
+        //act:
+        yield return null;
+        
+        //save the inventory
+        inventoryUI.inventory.SaveInventory("TEXT_inventory.json");
+
+        //alter the inventory
+        inventoryUI.inventory.items[0].itemName = "SomethingItShouldNotBe"; 
+        inventoryUI.inventory.items[1].itemName = "SomethingItShouldNotBeEither";
+        
+        //load the inventory
+        inventoryUI.inventory.LoadInventory("TEXT_inventory.json");
+
+        yield return null;
+        //assert
+        
+        //check the inventory data 
+        Assert.AreEqual("Sword", inventoryUI.inventory.items[0].itemName);
+        Assert.AreEqual("Shield", inventoryUI.inventory.items[1].itemName);
+        
+        yield return null;
+    }
+
+    [UnityTest]
+    public IEnumerator SavesAndLoadsWallet()
+    {
         // this test does NOT test the act of pressing the on screen
         // save and load icons, and only tests the functionally pressing
         // the icons would do
+
+        // arrange: need a wallet to store cash and a TextMeshPro asset to display it
         
-        // Arrange: create a canvas with a text mesh pro object,
-        // a wallet game object, and a save and load script objects.
+        // act: save the wallet, run a frame,  alter it, then revert to the save
         
-        //arrange
+        // assert: confirm the loading back of the wallet resulted in the original wallet from the save
+        
+        // arrange
         
         //create canvas
         GameObject canvasGameObject = new GameObject("Canvas");
@@ -383,30 +424,30 @@ public class InventoryPlayTests
         TextMeshProUGUI moneyTMpro = moneyUI.AddComponent<TextMeshProUGUI>();
         
         
-        // create the player wallet with lots of money
+        // create the player wallet with $100
         GameObject playerWallet = new GameObject("Player Wallet");
         Wallet walletComponent = playerWallet.AddComponent<Wallet>();
         walletComponent.uiWidget = moneyTMpro;
-        walletComponent.Money = 9999;
+        walletComponent.Money = 100;
         
-        //act
+        //act 
         yield return null;
         
-        //save the money
-    }
-
-    [UnityTest]
-    public IEnumerator SavesAndLoadsWallet()
-    {
-        // this test does NOT test the act of pressing the on screen
-        // save and load icons, and only tests the functionally pressing
-        // the icons would do
-
-        // arrange: need a UI to manipulate and to check it saved
+        //save the wallet
+        walletComponent.SaveWallet("TEST_wallet.txt");
         
-        // act: save the ui, run a frame,  alter it, then revert to the save
+        //change the value of the wallet
+        walletComponent.Money = 321;
         
-        // assert: confirm the loading back of the ui resulted in the original ui from the save
-        yield return null;
+        //reload previous wallet (which should be $100)
+        walletComponent.LoadWallet("TEST_wallet.txt");
+        
+        //assert
+        
+        //confirm the value of wallet is 100
+        Assert.AreEqual(100, walletComponent.Money);
+        //confirm the UI display of wallet is "$100"
+        Assert.AreEqual("$100", moneyTMpro.text);
+
     }
 }
