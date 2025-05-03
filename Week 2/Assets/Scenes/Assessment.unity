@@ -2855,9 +2855,9 @@ MonoBehaviour:
           m_StringArgument: wallet.txt
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 936079370}
-        m_TargetAssemblyTypeName: TestingFlags, GameAssembly
-        m_MethodName: Passed
+      - m_Target: {fileID: 495946312}
+        m_TargetAssemblyTypeName: InventoryEquip, GameAssembly
+        m_MethodName: LoadEquip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3286,9 +3286,9 @@ MonoBehaviour:
           m_StringArgument: wallet.txt
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 936079370}
-        m_TargetAssemblyTypeName: TestingFlags, GameAssembly
-        m_MethodName: Passed
+      - m_Target: {fileID: 495946312}
+        m_TargetAssemblyTypeName: InventoryEquip, GameAssembly
+        m_MethodName: LoadEquip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

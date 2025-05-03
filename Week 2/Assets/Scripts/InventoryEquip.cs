@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InventoryEquip : MonoBehaviour
@@ -49,5 +50,23 @@ public class InventoryEquip : MonoBehaviour
         }
         
         
+    }
+
+    public void LoadEquip()
+    {
+        swordGameObject.SetActive(false);
+        shieldGameObject.SetActive(false);
+        for (int i = 0; i < playerInventory.items.Length; i++)
+        {
+            if (playerInventory.items[i].itemName.Contains("Sword"))
+            {
+                swordGameObject.SetActive(true);
+            }
+
+            else if (playerInventory.items[i].itemName.Contains("Shield"))
+            {
+                shieldGameObject.SetActive(true);
+            }
+        }
     }
 }
