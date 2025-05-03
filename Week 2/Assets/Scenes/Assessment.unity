@@ -1277,6 +1277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495946311}
   - component: {fileID: 495946310}
+  - component: {fileID: 495946312}
   m_Layer: 0
   m_Name: Player Inventory
   m_TagString: Untagged
@@ -1316,6 +1317,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1425284331}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495946312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495946309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd01875f6a938e4b94c5298c3049182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 495946310}
+  swordGameObject: {fileID: 721816604}
+  shieldGameObject: {fileID: 1107521748}
 --- !u!1 &542508511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,6 +1540,11 @@ Transform:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 597308369130767402, guid: 2f7f3dde7ae722a4aafffe20691ad702, type: 3}
   m_PrefabInstance: {fileID: 1979352518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &721816604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1af6c9d4792b975498541f34267aefc6, type: 3}
+  m_PrefabInstance: {fileID: 252088228}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &746329221
 PrefabInstance:
@@ -2316,6 +2337,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2114283753834967213}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1107521748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8844aa84249870041850ad3f9a6f8fe4, type: 3}
+  m_PrefabInstance: {fileID: 1965874983}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221041499
 PrefabInstance:
   m_ObjectHideFlags: 0
