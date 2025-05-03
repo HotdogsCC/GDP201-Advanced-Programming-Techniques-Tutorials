@@ -2115,50 +2115,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878811317}
   m_CullTransparentMesh: 1
---- !u!1 &936079369
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 936079371}
-  - component: {fileID: 936079370}
-  m_Layer: 0
-  m_Name: Testing Flags
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &936079370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936079369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42defa04e4999fa44823ec538512a8bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &936079371
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936079369}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &981822975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8345070699079395522, guid: 09aade0ecefd01e4b8f7661acf64f5c2, type: 3}
@@ -2342,6 +2298,57 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8844aa84249870041850ad3f9a6f8fe4, type: 3}
   m_PrefabInstance: {fileID: 1965874983}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1151111927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151111928}
+  - component: {fileID: 1151111929}
+  m_Layer: 0
+  m_Name: Saver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1151111928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151111927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1425284331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1151111929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151111927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafc98ce8c5687342bee4531908ccd51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventorySaveLocation: inventory.json
+  chestInventorySaveLocation: chest.json
+  walletSaveLocation: wallet.txt
+  playerInventory: {fileID: 297727473}
+  chestInventory: {fileID: 1654617329}
+  wallet: {fileID: 2021718328}
+  inventoryEquip: {fileID: 495946312}
 --- !u!1001 &1221041499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2735,6 +2742,7 @@ Transform:
   m_Children:
   - {fileID: 495946311}
   - {fileID: 2021718327}
+  - {fileID: 1151111928}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497253909
@@ -2819,45 +2827,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297727473}
-        m_TargetAssemblyTypeName: InventoryUI, GameAssembly
-        m_MethodName: Save
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: inventory.json
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1654617329}
-        m_TargetAssemblyTypeName: InventoryUI, GameAssembly
-        m_MethodName: Save
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: chest.json
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2021718328}
-        m_TargetAssemblyTypeName: Wallet, GameAssembly
-        m_MethodName: SaveWallet
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: wallet.txt
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 495946312}
-        m_TargetAssemblyTypeName: InventoryEquip, GameAssembly
-        m_MethodName: LoadEquip
+      - m_Target: {fileID: 1151111929}
+        m_TargetAssemblyTypeName: Saver, GameAssembly
+        m_MethodName: SaveAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3250,45 +3222,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 297727473}
-        m_TargetAssemblyTypeName: InventoryUI, GameAssembly
-        m_MethodName: Load
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: inventory.json
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1654617329}
-        m_TargetAssemblyTypeName: InventoryUI, GameAssembly
-        m_MethodName: Load
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: chest.json
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2021718328}
-        m_TargetAssemblyTypeName: Wallet, GameAssembly
-        m_MethodName: LoadWallet
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: wallet.txt
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 495946312}
-        m_TargetAssemblyTypeName: InventoryEquip, GameAssembly
-        m_MethodName: LoadEquip
+      - m_Target: {fileID: 1151111929}
+        m_TargetAssemblyTypeName: Saver, GameAssembly
+        m_MethodName: LoadAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3622,7 +3558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiWidget: {fileID: 558871423}
-  money: 500
+  money: 1000
 --- !u!1 &2120210189
 GameObject:
   m_ObjectHideFlags: 0
@@ -13992,4 +13928,3 @@ SceneRoots:
   - {fileID: 983750693}
   - {fileID: 6200720780637163068}
   - {fileID: 1425284331}
-  - {fileID: 936079371}

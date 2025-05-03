@@ -25,54 +25,6 @@
             "price": 0
         },
         {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
-            "itemName": "",
-            "description": "",
-            "iconPath": "",
-            "color": {
-                "r": 0.0,
-                "g": 0.0,
-                "b": 0.0,
-                "a": 0.0
-            },
-            "price": 0
-        },
-        {
             "itemName": "Rusty Sword",
             "description": "A sword worn with age; perfect for young and naive hunters.",
             "iconPath": "Icons/Sword Icon",
@@ -95,6 +47,54 @@
                 "a": 0.0
             },
             "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "",
+            "description": "",
+            "iconPath": "",
+            "color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "price": 0
+        },
+        {
+            "itemName": "Wooden Shield",
+            "description": "A simple but effective way of protecting a young hunter from harm.",
+            "iconPath": "Icons/Shield Icon",
+            "color": {
+                "r": 0.0,
+                "g": 0.7358490228652954,
+                "b": 0.10887495428323746,
+                "a": 1.0
+            },
+            "price": 150
         },
         {
             "itemName": "",
