@@ -137,7 +137,6 @@ public class Chest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = true;
-            Debug.Log("player walked into me");
         }
     }
 
