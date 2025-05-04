@@ -122,6 +122,9 @@ public class Chest : MonoBehaviour
             //give control back to the player
             playerInput.SwitchCurrentActionMap("Player");
         }
+
+        InfoBox infoBox = FindObjectOfType<InfoBox>();
+        infoBox.Vanish();
         
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

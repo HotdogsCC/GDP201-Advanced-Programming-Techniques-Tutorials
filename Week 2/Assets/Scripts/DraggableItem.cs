@@ -78,6 +78,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (dragging)
         {
             transform.position = eventData.position;
+            infoBox.Vanish();
         }
     }
 
