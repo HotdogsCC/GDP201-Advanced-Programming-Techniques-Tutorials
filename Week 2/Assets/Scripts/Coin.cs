@@ -18,14 +18,24 @@ public class Coin : MonoBehaviour
         Spin();
     }
 
+    public void MimicCollisionForTest()
+    {
+        ApplyMoney();
+    }
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            wallet.Money += 100;
-            Destroy(gameObject);
+            ApplyMoney();
         }
+    }
+
+    private void ApplyMoney()
+    {
+        wallet.Money += 100;
+        Destroy(gameObject);
     }
 
     private void Spin()

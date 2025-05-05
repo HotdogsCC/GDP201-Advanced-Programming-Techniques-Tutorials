@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
             {
                 if (playerWallet.Money < item.price)
                 {
-                    Debug.Log("cannot afford");
+                    GameLogger.Log("cannot afford");
                     return;
                 }
 
@@ -63,7 +63,7 @@ public class Inventory : MonoBehaviour
         SerializableInventory serializableInventory = new SerializableInventory(this);
         string json = JsonUtility.ToJson(serializableInventory, true);
         System.IO.File.WriteAllText(saveFilePath, json);
-        Debug.Log($"Inventory saved to {saveFilePath}");
+        GameLogger.Log($"Inventory saved to {saveFilePath}");
     }
 
     public void LoadInventory(string saveFilePath)

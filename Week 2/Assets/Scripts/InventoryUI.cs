@@ -56,7 +56,7 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Whoopsie! You've got an incorrect transaction type in HandleItemTransaction!");
+            GameLogger.Log("Whoopsie! You've got an incorrect transaction type in HandleItemTransaction!", GameLogger.LogLevel.Error);
         }
     }
 

@@ -7,8 +7,8 @@ public class Chest : MonoBehaviour
     private InputAction openAction;
     private InputAction closeAction;
 
-    [SerializeField] private InventoryUI playerInventory;
-    [SerializeField] private InventoryUI chestInventory;
+    [SerializeField] public InventoryUI playerInventory;
+    [SerializeField] public InventoryUI chestInventory;
 
     private PlayerInput playerInput;
     
@@ -25,13 +25,13 @@ public class Chest : MonoBehaviour
         //checks if open action exists
         if (openAction == null)
         {
-            Debug.LogWarning("Open Action was unable to be found");
+            GameLogger.LogWarning("Open Action was unable to be found");
         }
         
         //checks if close action exists
         if (closeAction == null)
         {
-            Debug.LogWarning("Close Action was unable to be found");
+            GameLogger.LogWarning("Close Action was unable to be found");
         }
         
         //finds the player
@@ -42,24 +42,24 @@ public class Chest : MonoBehaviour
             playerInput = player.GetComponent<PlayerInput>();
             if (!playerInput)
             {
-                Debug.LogWarning("Player Input was unable to be found");
+                GameLogger.LogWarning("Player Input was unable to be found");
             }
         }
         else
         {
-            Debug.LogWarning("Player was unable to be found");
+            GameLogger.LogWarning("Player was unable to be found");
         }
         
         //checks if player inventory exists
         if (!playerInventory)
         {
-            Debug.LogWarning("Player Inventory not found");
+            GameLogger.LogWarning("Player Inventory not found");
         }
         
         //checks if chest inventory exits
         if (!chestInventory)
         {
-            Debug.LogWarning("Chest Inventory not found");
+            GameLogger.LogWarning("Chest Inventory not found");
         }
     }
 
@@ -98,7 +98,7 @@ public class Chest : MonoBehaviour
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
-    private void OnOpen()
+    public void OnOpen()
     {
         if (playerInput)
         {
@@ -115,7 +115,7 @@ public class Chest : MonoBehaviour
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
-    private void OnClose()
+    public void OnClose()
     {
         if (playerInput)
         {
@@ -148,7 +148,6 @@ public class Chest : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerNearby = false;
-            Debug.Log("player left me");
         }
     }
 }

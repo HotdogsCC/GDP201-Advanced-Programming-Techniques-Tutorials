@@ -16,6 +16,14 @@ public class InfoBox : MonoBehaviour
 
     private Canvas canvas;
 
+    //used for testing purposes, assigned in editor for play mode
+    public void SetUpTMPro(TextMeshProUGUI in1, TextMeshProUGUI in2, TextMeshProUGUI in3)
+    {
+        nameOfItem = in1;
+        description = in2;
+        price = in3;
+    }
+    
     private void Start()
     {
         canvas = FindObjectOfType<Canvas>();

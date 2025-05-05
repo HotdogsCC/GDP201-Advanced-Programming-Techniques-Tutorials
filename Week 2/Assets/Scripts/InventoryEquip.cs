@@ -6,11 +6,11 @@ using UnityEngine;
 public class InventoryEquip : MonoBehaviour
 {
     [Header("Inventory Reference")]
-    [SerializeField] private Inventory playerInventory;
+    [SerializeField] public Inventory playerInventory;
     
     [Header("Equip Object References")]
-    [SerializeField] private GameObject swordGameObject;
-    [SerializeField] private GameObject shieldGameObject;
+    [SerializeField] public GameObject swordGameObject;
+    [SerializeField] public GameObject shieldGameObject;
     
     // Start is called before the first frame update
     void Start()

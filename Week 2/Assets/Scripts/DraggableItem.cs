@@ -25,7 +25,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         infoBox = FindObjectOfType<InfoBox>();
         if (infoBox == null)
         {
-            Debug.Log("Info box was failed to be found");
+            GameLogger.Log("Info box was failed to be found");
         }
     }
 
@@ -97,17 +97,14 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             InventorySlot slotFound = hit.gameObject.GetComponent<InventorySlot>();
             if (slotFound != null && slotFound != slot)
             {
-                Debug.Log("there is a slot under neath me");
                 // If the item was dropped in the same inventory as it is currently 
                 // in, then the player is reordering the items in the inventory. 
                 // In this case, we should not trigger the OnItemTransaction event.
                 if (slot.parentInventory != slotFound.parentInventory)
                 {
-                    Debug.Log("i am going into a different inventory");
                     // inventories are not the same - we are moving between inventories
                     if (slotFound.draggableItem != null)
                     {
-                        Debug.Log("the item is not null");
                         // we need to keep a copy of the items we are swapping, 
                         // because once we add and remove items from the inventory, 
                         // the item values will change
@@ -125,17 +122,15 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                         //i.e. checking if an item is being sold
                         if (slotFound.parentInventory.gameObject.name == "Player Inventory")
                         {
-                            Debug.Log("this is the player inventory");
                             //checks the player can afford the purchase
                             if (playerWallet.Money < ours.price)
                             {
-                                Debug.Log("not enough money");
+                                GameLogger.LogVerbose("not enough money");
                                 //doesnt run the swap if the player cannot aford it
                                 return;
                             }
                         }
                         
-                        Debug.Log("swappin");
                         slot.parentInventory.inventory.AddItem(theirs, slot.index);
                         slot.draggableItem.SetItem(theirs);
 
@@ -145,7 +140,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
                 }
                 else
                 {
-                    Debug.Log("i am going into the same inventory");
                     //swaps items in same inventory
                     Swap(slotFound);
                 }
