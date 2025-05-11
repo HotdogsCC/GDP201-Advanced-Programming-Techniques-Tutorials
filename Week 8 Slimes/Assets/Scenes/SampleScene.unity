@@ -262,12 +262,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnArea: {x: 40, y: 40}
   slimeColours:
+  - {r: 0, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0.07629752, g: 1, b: 0, a: 0}
   - {r: 0, g: 0.09833479, b: 1, a: 0}
+  - {r: 1, g: 0, b: 0.77993584, a: 0}
+  - {r: 1, g: 0, b: 0.77993584, a: 0}
   foodPrefab: {fileID: 4354458251941205946, guid: c900387443d6823449692e9beb878800, type: 3}
   foodStart: 10
   foodSpawnDelay: 2.5
+  slimePrefab: {fileID: 4462787247832368603, guid: 321869fad0dd27a47969d4d5adac1369, type: 3}
+  slimeStart: 100
+  slimeSpawnDelay: 5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

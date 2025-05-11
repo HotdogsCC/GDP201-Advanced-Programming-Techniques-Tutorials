@@ -14,6 +14,12 @@ public class GameManager : MonoBehaviour
     private List<Food> activeFoods;
     private ObjectPool<Food> foodPool;
 
+    [Header("Slime Data")] public GameObject slimePrefab;
+    public uint slimeStart = 100;
+    public float slimeSpawnDelay = 5;
+    private List<Slime> activeSlimes;
+    private ObjectPool<Slime> slimePool;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +37,21 @@ public class GameManager : MonoBehaviour
             foodPool.PopFromPool();
         }
         StartCoroutine(TriggerAfterDelayLoop(foodSpawnDelay, () => foodPool.PopFromPool()));
+        
+        //slime init
+        activeSlimes = new List<Slime>();
+        slimePool = new ObjectPool<Slime>(
+            OnCreateSlime,
+            OnPopSlime,
+            OnReturnSlime,
+            OnDestroySlime,
+            slimeStart);
+        for (int i = 0; i < slimeStart; i++)
+        {
+            slimePool.PopFromPool();
+        }
+
+        StartCoroutine(TriggerAfterDelayLoop(slimeSpawnDelay, () => slimePool.PopFromPool()));
     }
 
     private IEnumerator TriggerAfterDelayLoop(float delay, System.Action action)
@@ -72,5 +93,38 @@ public class GameManager : MonoBehaviour
     public void RemoveFood(Food food)
     {
         foodPool.ReturnToPool(food);
+    }
+
+    private Slime OnCreateSlime()
+    {
+        return Instantiate(slimePrefab, transform).GetComponent<Slime>();
+    }
+
+    private void OnPopSlime(Slime slime)
+    {
+        slime.gameObject.SetActive(true);
+        slime.transform.position = new Vector3(
+            Random.Range(-spawnArea.x * 0.5f, spawnArea.x * 0.5f),
+            0,
+            Random.Range(-spawnArea.y * 0.5f, spawnArea.y * 0.5f)
+        );
+        slime.Init(this);
+        activeSlimes.Add(slime);
+    }
+
+    private void OnReturnSlime(Slime slime)
+    {
+        slime.gameObject.SetActive(false);
+        activeSlimes.Remove(slime);
+    }
+
+    private void OnDestroySlime(Slime slime)
+    {
+        Destroy(slime.gameObject);
+    }
+
+    public void RemoveSlime(Slime slime)
+    {
+        slimePool.ReturnToPool(slime);
     }
 }
