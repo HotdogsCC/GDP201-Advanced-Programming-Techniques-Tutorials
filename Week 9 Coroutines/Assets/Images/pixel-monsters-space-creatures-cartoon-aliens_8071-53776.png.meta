@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: fad819d333600384198c92d923c3d352
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d61b3e8ca0fa954f8ada2457d32e3ef
+      internalID: 2065564867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 309
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de819a07fc7dbc49aaee32d220a2d82
+      internalID: 255528889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 309
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2ab07c8ffecf740bced84569233925
+      internalID: -1262178694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 309
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963b55dd04a324e439e40d6da8bbd13f
+      internalID: 670380560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 309
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb81aa2d7b1a63448ff538c3703ae17
+      internalID: -155755485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_5
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 309
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d052cdd8aaa7c394b957f62f48b18e6b
+      internalID: 442628360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_6
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 309
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55c6189fa2e6e645b1a8d7253a44fa7
+      internalID: 967148186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 244
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33910c71cc09f6745ab79495cdb450b8
+      internalID: 137817646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 244
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55aa411b873d1846b51717c18b48e86
+      internalID: -83274889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_9
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 244
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de57b5e6e371ba242968b69823134848
+      internalID: -1222272201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 244
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6828b2671bc00a840b9c576ddb22d99f
+      internalID: 778764634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_11
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 244
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d80bcf0c1a3cf44bd6de75d90219bd
+      internalID: 50276799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_12
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 244
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdc7df58ef4ba1448dae6a34f0c2e99
+      internalID: 2139771857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 244
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e4cc6761af92945b5522d93fbc9b63
+      internalID: -930024985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 179
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b7682b99cca944d90cd9bb38f924d1
+      internalID: 803319749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_15
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 179
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4b37a8fb01b87489098028d9c68b3d
+      internalID: 1072758023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_16
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 179
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b0d522fe7e3b14bb72ad3f974a656b
+      internalID: 711384241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 179
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835acd77a0279f748a16d393a83221f0
+      internalID: -592552560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_18
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 179
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e94bbf4be3b2554fad0541b7d5bbbf8
+      internalID: 556297056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_19
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 179
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04a9f4fccce99e46a06d42262a53ac3
+      internalID: 633188770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_20
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 179
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8302351481bd3b0419382ac5f8ee55d5
+      internalID: 1243567122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de1f94d3d1b4ca4884259f0fb2d046f
+      internalID: -779000164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_22
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 114
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c856413522c4c6458202af692ace092
+      internalID: -1744193961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_23
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 114
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03bb9888d515b242a92c9992f9bf104
+      internalID: 899408002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_24
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 114
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d686ac2d6909047bbaea1be3260abc
+      internalID: 391438791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_25
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 114
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed0099f076fff24886a1ee3a74d8916
+      internalID: 483534328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_26
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 114
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911d585cc30308a49ac29a4f970f1ead
+      internalID: -187418011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_27
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 114
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bb7c1688c7b8e4498b79deedab4c51
+      internalID: -1680566898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ec0b9989e159e418562c70743cd28d
+      internalID: 1854236622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_29
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 49
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b438b63133bef840a80f4959b8b714a
+      internalID: 1724215752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_30
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 49
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59669e159b5e2e544ae87eef03cfe6ba
+      internalID: -1301657076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_31
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 49
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9c910ea59af5a45aa93f3960ca15a1
+      internalID: 557474841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_32
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 49
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108e8478779f57a40838b3a984b84b75
+      internalID: -1651542334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_33
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 49
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cef42532fc17de408b096824dc1f141
+      internalID: 152000828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel-monsters-space-creatures-cartoon-aliens_8071-53776_34
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 49
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8014c53ddcb19604ea8cc6a5b4184693
+      internalID: -1885055288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_0: 2065564867
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_1: 255528889
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_10: 778764634
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_11: 50276799
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_12: 2139771857
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_13: -930024985
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_14: 803319749
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_15: 1072758023
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_16: 711384241
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_17: -592552560
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_18: 556297056
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_19: 633188770
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_2: -1262178694
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_20: 1243567122
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_21: -779000164
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_22: -1744193961
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_23: 899408002
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_24: 391438791
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_25: 483534328
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_26: -187418011
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_27: -1680566898
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_28: 1854236622
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_29: 1724215752
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_3: 670380560
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_30: -1301657076
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_31: 557474841
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_32: -1651542334
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_33: 152000828
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_34: -1885055288
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_4: -155755485
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_5: 442628360
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_6: 967148186
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_7: 137817646
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_8: -83274889
+      pixel-monsters-space-creatures-cartoon-aliens_8071-53776_9: -1222272201
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
