@@ -31,10 +31,42 @@ public class Spawner : MonoBehaviour
     }
 
     // *** Step 8
+    IEnumerator MushroomSpawner()
+    {
+        while(Application.isPlaying)
+        {
+            var (x, y) = GameManager.Manager.PickRandomCell();
+            Vector3 point = new Vector3();
+            (point.x, point.y) = GameManager.Manager.GetPosition(x, y);
+            SafeSpawn(mushroom, point);
+            yield return new WaitForSeconds(GameManager.LevelScale(0.2f, 5.0f));
+        }
+    }
+
+    IEnumerator BugSpawner()
+    {
+        while(Application.isPlaying)
+        {
+            var (x, y) = GameManager.Manager.PickRandomCell();
+            var (xCount, yCount) = GameManager.Manager.GetCount();
+            Vector3 point = new Vector3();
+            (point.x, point.y) = GameManager.Manager.GetPosition(x, yCount - 1); // top row
+            var bugInstance = SafeSpawn(bug, point);
+            if(bugInstance != null)
+            {
+                bugInstance.GetComponent<BugScript>().spd =
+                    ((float)GameManager.Manager.Level()) * 0.35f + 5f;
+            }
+
+            yield return new WaitForSeconds(GameManager.LevelScale(0.2f, 5.0f));
+        }
+    }
 
     void Start()
     {
         // *** Step 8
+        StartCoroutine(MushroomSpawner());
+        StartCoroutine(BugSpawner());
     }
 
 }

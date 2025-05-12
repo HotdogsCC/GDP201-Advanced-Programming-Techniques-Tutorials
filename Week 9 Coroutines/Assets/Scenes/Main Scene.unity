@@ -746,7 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mushroom: {fileID: 4252608222858094255, guid: b63f23426c8deb245aed270ede2c9003, type: 3}
-  blob: {fileID: 4252608222858094255, guid: 76e3f80cd313a8e4f832218bc6ab4b5e, type: 3}
+  bug: {fileID: 4252608222858094255, guid: 76e3f80cd313a8e4f832218bc6ab4b5e, type: 3}
 --- !u!4 &959879665
 Transform:
   m_ObjectHideFlags: 0

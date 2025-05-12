@@ -11,8 +11,26 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
 
     // *** Fire variables here
+    public float bulletRate = 1.0f;
+    public float bulletSpeed = 15.0f;
+    private bool canFire = false;
 
     // *** Bullet coroutine
+    IEnumerator FireBullet()
+    {
+        while (true)
+        {
+            if (canFire)
+            {
+                var constantMotion = Instantiate(bullet, transform.position, Quaternion.identity)
+                    .GetComponent<ConstantMotion>();
+                constantMotion.velocity = new Vector3(0, bulletSpeed, 0);
+                yield return new WaitForSeconds(bulletRate);
+                canFire = false;
+            }
+            yield return null;
+        }
+    }
 
     public IEnumerator ApplyBuff(PickupEffect pe)
     {
@@ -25,6 +43,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         // *** Step 6
+        StartCoroutine(FireBullet());
     }
 
     // Update is called once per frame
@@ -50,6 +69,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             // *** Step 6
+            canFire = true;
         }
 
         transform.position = transform.position + move * speed * Time.deltaTime;
