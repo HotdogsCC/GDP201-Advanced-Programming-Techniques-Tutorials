@@ -151,9 +151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74031354170c87140a8ff89c7b41146f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usingDataOrientedDesign: 0
   cubePrefabOOP: {fileID: 2138189663029182598, guid: ed93fcbb6ef4b534da07d09b5382db1a, type: 3}
+  cubeMaterial: {fileID: 2100000, guid: 3c1d9d7649b457845886ff5c2cc8ee9e, type: 2}
   gridDimension: 100
   gridSpacing: 1
+  yMultiplier: 1
+  resolution: 0.2
 --- !u!4 &71107669
 Transform:
   m_ObjectHideFlags: 0

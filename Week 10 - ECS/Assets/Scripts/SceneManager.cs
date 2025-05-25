@@ -19,11 +19,30 @@ public class SceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = -(gridDimension / 2); i < (gridDimension / 2); i++)
+        cubePositions = new Vector3[gridDimension * gridDimension]; // enough elements for all the cubes
+        uint cubeIndex = 0; // counter for the cube index
+
+        if (usingDataOrientedDesign)
         {
-            for(int j = 0; j < gridDimension; j++)
+            for (int i = (-gridDimension / 2); i < (gridDimension / 2); i++)
             {
-                Instantiate(cubePrefabOOP, new Vector3(i * gridSpacing, 0, j * gridSpacing), Quaternion.identity);
+                for (int j = 0; j < gridDimension; j++)
+                {
+                    cubePositions[cubeIndex++] = new Vector3(i * gridSpacing, 0, j * gridSpacing);
+                }
+            }
+
+            mesh = cubePrefabOOP.GetComponent<MeshFilter>().sharedMesh;
+            rp = new RenderParams(cubeMaterial);
+        }
+        else
+        {
+            for (int i = -(gridDimension / 2); i < (gridDimension / 2); i++)
+            {
+                for(int j = 0; j < gridDimension; j++)
+                {
+                    Instantiate(cubePrefabOOP, new Vector3(i * gridSpacing, 0, j * gridSpacing), Quaternion.identity);
+                }
             }
         }
     }
@@ -31,6 +50,16 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (usingDataOrientedDesign)
+        {
+            foreach (var position in cubePositions)
+            {
+                Vector3 thisPosition = position;
+                float y = Mathf.Sin(position.x * resolution + Time.fixedTime) +
+                          Mathf.Sin(position.z * resolution + Time.fixedTime);
+                thisPosition.y = y;
+                Graphics.RenderMesh(rp, mesh, 0, Matrix4x4.Translate(thisPosition));
+            }
+        }
     }
 }
