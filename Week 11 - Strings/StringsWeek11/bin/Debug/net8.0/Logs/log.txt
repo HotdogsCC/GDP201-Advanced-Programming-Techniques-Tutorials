@@ -1,0 +1,30 @@
+[2025-05-06 15:02:07] Player "CrimsonViper" entered zone: "Obsidian Highlands" (x:412, y:129)
+[2025-05-06 15:03:21] /whisper "IronFist77" Got the keys. Ready for vault run?
+[2025-05-06 15:04:56] Player "IronFist77" picked up item: [Rare Amulet of Storms] (itemID: 3390)
+[2025-05-06 15:06:12] ERROR: Failed to equip [Broken Chainmail] - item durability too low
+[2025-05-06 15:07:44] Quest "Echoes of the Forgotten" started by "CrimsonViper"
+[2025-05-06 15:09:03] Combat Log: "CrimsonViper" hit "Stonebound Titan" for 143 damage.
+[2025-05-06 15:09:48] Combat Log: "Stonebound Titan" hit "CrimsonViper" for 98 damage.
+[2025-05-06 15:10:22] Combat Log: "CrimsonViper" hit "Stonebound Titan" for 201 crit damage.
+[2025-05-06 15:11:59] Player "CrimsonViper" picked up item: [Titan Core Fragment] (itemID: 5594)
+[2025-05-06 15:12:30] /party "IronFist77" Let’s regroup at the basalt cliffs.
+[2025-05-06 15:13:47] Player "IronFist77" disconnected (reason: lost connection)
+[2025-05-06 15:14:18] Player "CrimsonViper" entered zone: "Sunken Archives" (x:87, y:443)
+[2025-05-06 15:15:00] ERROR: Invalid item ID '0000' in inventory sync
+[2025-05-06 15:33:17] Player "ShadowFang92" entered zone: "Obsidian Hollow" (x:198, y:301)
+[2025-05-06 15:34:02] /whisper "NightWolf" Found the relic—need backup, it’s crawling with Reavers.
+[2025-05-06 15:35:10] Player "NightWolf" entered zone: "Obsidian Hollow" (x:195, y:298)
+[2025-05-06 15:36:21] Player "NightWolf" picked up item: [Ancient Sigil Fragment] (itemID: 4620)
+[2025-05-06 15:37:33] Combat Log: "NightWolf" hit "Reaver Captain" for 76 damage.
+[2025-05-06 15:37:48] Combat Log: "Reaver Captain" hit "NightWolf" for 109 crit damage.
+[2025-05-06 15:38:12] Combat Log: "ShadowFang92" hit "Reaver Captain" for 201 crit damage.
+[2025-05-06 15:39:30] Player "NightWolf" used item: [Greater Health Potion] (itemID: 1104)
+[2025-05-06 15:40:45] ERROR: Attempted to mount in restricted zone "Obsidian Hollow"
+[2025-05-06 15:42:00] Quest "Echoes Beneath the Stone" completed by "ShadowFang92"
+[2025-05-06 15:43:12] Player "ShadowFang92" received reward: [Gold: 350, XP: 1200]
+[2025-05-06 15:44:37] /guild "NightWolf" Boss down! Meet at camp for loot roll.
+[2025-05-06 15:45:51] Player "NightWolf" rolled a 92 on item: [Reaver's Spiteblade] (itemID: 4722)
+[2025-05-06 15:46:00] Player "ShadowFang92" rolled a 37 on item: [Reaver's Spiteblade] (itemID: 4722)
+[2025-05-06 15:46:08] Loot assigned to "NightWolf"
+[2025-05-06 15:47:23] Player "NightWolf" entered zone: "Crimson Wastes" (x:203, y:92)
+[2025-05-06 15:48:44] ERROR: Invalid emote '/dance_furious' - emote not learned

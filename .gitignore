@@ -46,3 +46,15 @@ Week 10 - ECS/.vsconfig
 /Week 10 - DOTS/Logs
 /Week 10 - DOTS/obj
 /Week 10 - DOTS/UserSettings
+
+/Week 11 - Strings/StringsWeek11/.vs
+/Week 11 - Strings/StringsWeek11/obj
+
+/Week 11 - Strings/StringsWeek11/bin/*
+!/Week 11 - Strings/StringsWeek11/bin/Debug/
+
+/Week 11 - Strings/StringsWeek11/bin/Debug/*
+!/Week 11 - Strings/StringsWeek11/bin/Debug/net8.0/
+
+/Week 11 - Strings/StringsWeek11/bin/Debug/net8.0/*
+!/Week 11 - Strings/StringsWeek11/bin/Debug/net8.0/Logs
